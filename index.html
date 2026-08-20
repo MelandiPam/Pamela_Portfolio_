@@ -624,7 +624,7 @@ const rgrid=document.getElementById('repoGrid');
 repos.forEach(r=>{
   const c=document.createElement('div');c.className='glass repo-card reveal';
   c.innerHTML=`<div class="repo-name">📁 ${r.name}</div><p class="repo-desc">${r.desc}</p><div class="repo-meta"><span><span class="lang-dot" style="background:${r.langColor}"></span>${r.lang}</span><span>⭐ View on GitHub</span></div>`;
-  c.addEventListener('click',()=>window.open(r.url,'_blank','noopener'));
+  c.addEventListener('click',()=>window.open(`https://github.com/MelandiPam/${r.name}`, '_blank'));
   rgrid.appendChild(c);
 });
  
