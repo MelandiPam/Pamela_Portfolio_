@@ -621,10 +621,15 @@ const repos=[
   {name:'Data_analysis_AI', desc:'DataWise AI – topic-limited data analysis chatbot powered by Groq Llama 3.3 70B.', lang:'JavaScript', url:'https://github.com/MelandiPam/Data_analysis_AI'}
 ];
 const rgrid=document.getElementById('repoGrid');
-repos.forEach(r=>{
-  const c=document.createElement('div');c.className='glass repo-card reveal';
-  c.innerHTML=`<div class="repo-name">📁 ${r.name}</div><p class="repo-desc">${r.desc}</p><div class="repo-meta"><span><span class="lang-dot" style="background:${r.langColor}"></span>${r.lang}</span><span>⭐ View on GitHub</span></div>`;
-  c.addEventListener('click',()=>window.open(`https://github.com/MelandiPam/${r.name}`, '_blank'));
+repos.forEach(r => {
+  const c = document.createElement('a');
+  c.href = `https://github.com/MelandiPam/${r.name}`;
+  c.target = '_blank';
+  c.rel = 'noopener noreferrer';
+  c.className = 'glass repo-card reveal';
+  c.style.display = 'block';
+  c.style.textDecoration = 'none';
+  c.innerHTML = `<div class="repo-name">📁 ${r.name}</div><p class="repo-desc">${r.desc}</p>`;
   rgrid.appendChild(c);
 });
  
