@@ -517,6 +517,7 @@ const barObs=new IntersectionObserver(entries=>entries.forEach(e=>{
  
 /* PROJECTS */
 const projects = [
+ const projects = [
   {
     title: 'Melandi AI Solution',
     desc: 'A comprehensive AI portfolio platform showcasing end-to-end AI development capabilities.',
@@ -558,21 +559,6 @@ const projects = [
     demo: 'https://data-analysis-ai-oopm.onrender.com'
   }
 ];
-    cats:['ai','web'],
-    github:'https://github.com/MelandiPam/AI_Smart_Ticketing_System',
-    demo:'https://github.com/MelandiPam/AI_Smart_Ticketing_System',
-  },
-  {title:'High End Service Desk',
-desc:'Interactive IT Helpdesk / Incident Management simulation. Live, step-by-step troubleshooting flows, real-time activity timeline, ticket lifecycle (Open → In Progress → Resolved → Closed), and a full service desk dashboard.',
-icon:'🎫',bg:'linear-gradient(135deg,#fda4af,#f0abfc)',
-tags:['HTML','CSS','JavaScript'],
-cats:['web'],
-github:'https://github.com/MelandiPam/High-end-service-desk',
-demo:'https://melandipam.github.io/High-end-service-desk/',
-},
-];
-const pgrid=document.getElementById('projectsGrid');
-function renderProjects(filter='all'){
   pgrid.innerHTML='';
   projects.filter(p=>filter==='all'||p.cats.includes(filter)).forEach(p=>{
     const c=document.createElement('div');c.className='glass project-card reveal';
